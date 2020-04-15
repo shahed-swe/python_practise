@@ -32,3 +32,5 @@ print(r"\" \n \t \'")
 #Emoji printing
 #print("U+1F602") previous form
 print("\U0001F602\U0001F602\U0001F602\U0001F602")  # next form
+
+
