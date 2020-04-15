@@ -338,3 +338,28 @@ if __name__ == '__main__':
   print("Difference is: {}".format(differ(numbers)))
   print(min(numbers))
   print(max(numbers))
+
+
+# list count
+def list_count(list1):
+  count = 0
+  for i in list1:
+    if type(i) == list:
+      count += 1
+  return count
+
+if __name__ == '__main__':
+  list1 = [1,2,5,[4,5,6],[5,8,7]]
+  print("Total list element: {}".format(list_count(list1)))
+
+# difference between append and extend
+list1 = [1,2,3]
+list1.append("Shahed")
+list1.append([1,5,6])
+list1.extend([6,4,9])
+list2 = [2,9,5]
+print(list1)
+print(list1 + list2)
+
+
+
