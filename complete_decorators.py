@@ -1,4 +1,7 @@
+from functools import wraps
+
 def decorator_function(any_function):
+    @wraps(any_function)
     def wrapper_function(*args,**kwargs):
         '''this is wrapper function'''
         any_function(*args,**kwargs)
