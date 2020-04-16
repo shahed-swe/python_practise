@@ -63,3 +63,28 @@ def func4(take):
 
 var = func4(2)
 print(var(33))
+
+# decorators - enhacne the functionality of other functions
+
+def decorator_function(any_function):
+    def wrapper_function():
+        print('this is awesome function')
+        any_function()
+    return wrapper_function
+
+# this is awesome function
+def func1():
+    print("this is function 1")
+
+def func2():
+    print("this is function 2")
+
+var = decorator_function(func1)
+var()
+
+@decorator_function
+def func3():
+    print("shortcut decoration")
+
+func3()
+
