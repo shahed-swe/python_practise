@@ -54,3 +54,21 @@ print("My name is: {0:>4} and my id is: {1:<4}".format("Shahed", "173-25-258"))
 #must use caret symbol > the string length
 print("{0:*^9s}".format("Shahed"))
 print("{0:*^7s}".format("Shahed"))
+
+
+#operator in python
+name = "sha"
+name = name + "hed"
+print(name) #we cam add two string..but can't add two different type of data typed varibles value like
+age = 21
+# print(name + age) #this will show error
+#but we can add int type and float type data like
+age2 = 22
+print(age + age2)
+# we can also operators like that way
+age += age2
+print(age) #this will like same as before like
+age -= 2
+print(age)
+age *= 2
+print(age)

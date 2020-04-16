@@ -118,3 +118,31 @@ new_name = name.center(l+2,"*")
 print(new_name)
 new_name = name.ljust(l+2,"*")
 new_name = name.rjust(l+2,"*")
+
+# upper()
+# lower()
+# title()
+# find()
+# count()
+# strip()
+# lstrip()
+# rstrip()
+#replace()
+name = "The quick brown fox jumps over the lazy dog"
+print(text.upper())
+print(text.lower())
+print(name.title())
+
+string = "Suppose you have to do this early and you have to the same work again you to"
+
+print(name.find("fox"))
+print(string.find("to",18, 45))
+print(string.find("you",12))
+print(string.count("you",10,41))
+text = "           Shahed           "
+print(string.strip())
+print(text.lstrip())
+print(text.rstrip())
+print(text.strip())
+
+print(string.replace(" ","",3))
