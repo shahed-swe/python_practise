@@ -44,6 +44,12 @@ def printing_method(i, j, a):
 #         a[j] = a[i]
 #     remove_odd_int(i+1, j,n,a)
 
+# square sum
+def sqr_sum(n):
+    if n == 1:
+        return 1
+    return n * n + sqr_sum(n-1)
+
 if __name__ == '__main__':
     number = factorial(4)
     print(number)
@@ -53,6 +59,7 @@ if __name__ == '__main__':
     # for next problem
     printing_method(0, len(list1)-1, list1)
     # for next problem
+    print(sqr_sum(10))
     # remove_odd_int(0,0,len(list1), list1)
     # for i in list1:
     #     print(i)
