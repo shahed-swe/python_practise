@@ -19,4 +19,14 @@ def join_string(*args):
         string += i
     return string
 
-print(join_string('Shahed','Talukder'))
+@only_data_type_allow(int)
+def summation(*args):
+    total = 0
+    for i in args:
+        total += i
+    return total
+
+
+if __name__ == '__main__':
+    print(join_string('Shahed', ' Talukder'))
+    print(summation(1,2,3,4,5))
