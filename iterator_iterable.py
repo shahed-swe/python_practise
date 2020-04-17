@@ -35,3 +35,7 @@ print(next(list2))
 print(next(list2))
 print(next(list2))
 print(next(list2))
+
+
+for i in map(int, square(l1)):
+    print(i)
