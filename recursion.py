@@ -56,3 +56,9 @@ if __name__ == '__main__':
     # remove_odd_int(0,0,len(list1), list1)
     # for i in list1:
     #     print(i)
+    n = int(input('Enter a number:'))
+    fact = 1
+    while n >= 1:
+        fact = fact * n
+        n = n - 1
+    print(f"Factorial: {fact}")
