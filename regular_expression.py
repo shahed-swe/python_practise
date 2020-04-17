@@ -97,9 +97,9 @@ print(p)
 # * --> zero or more
 
 a = 'shahed.talukder51@hotmailemail.com'
-# p = re.search('\w+\.*\w+@\w+.com',a,re.I)
-p = re.search('\w+\.*\w+@\w+.\w+',a,re.I)
-# p = re.search('\w+\.*\w+@gmail.com',a,re.I)
+# p = re.search('\w+\.*\w+@\w+.com',a,re.I) #universal .com mail pattern
+p = re.search('\w+\.*\w+@\w+.\w+',a,re.I) #universal mail pattern
+# p = re.search('\w+\.*\w+@gmail.com',a,re.I) #universal gmail.com mail pattern
 
 
 if p:
