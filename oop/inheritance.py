@@ -100,3 +100,8 @@ s3 = Phone()
 print(isinstance(s3, Phone))
 print(isinstance(s3, Smartphone))
 print(isinstance(s3, Flagship))
+# issubclass --> check the subclas
+print(issubclass(Smartphone, Phone))
+print(issubclass(Smartphone, Flagship))
+print(issubclass(Flagship, Phone))
+print(issubclass(Flagship, Smartphone))
