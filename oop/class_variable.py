@@ -22,14 +22,30 @@ class Laptop:
         self.brand_name = brand_name
         self.model_name = model_name
         self.price = price
+
+    # defining class method
+    @classmethod
+    def count_instances(cls): #this is class method
+        return "you have created {} instances".format(cls.count_instance)
     
-    def laptop_details(self):
+
+    # @classmethod
+    # def from_string(cls, string): #constructor using class method
+    #     first,last,end = string.split(',')
+    #     # price = int(price)
+    #     return cls(first,last,end)
+
+    def laptop_details(self): #instance methods
         return f"Laptop Name: {self.brand_name}\nModel Name: {self.model_name}"
 
-    def apply_discount(self):
+    def apply_discount(self): #instance methods
         # self.price
         off_price = (Laptop.discount_price/100)*self.price
         return self.price - off_price
+
+    @staticmethod
+    def method_static():
+        print("Static method has been called")
 
 
 if __name__ == '__main__':
@@ -45,6 +61,11 @@ if __name__ == '__main__':
     new_laptop.discount_price = 20
     print(new_laptop.__dict__)
     new_laptop2 = Laptop()
+    print(new_laptop2.__dict__)
     new_laptop3 = Laptop()
     print(Laptop.count_instance)
-    print(new_laptop3.count_instance)
+    print(new_laptop3.count_instance) #both of the results are same
+    print(Laptop.count_instances())
+    # laptop1 = Laptop.from_string("Shahed,Ashik,1899")
+    # print(laptop1.brand_name)
+    new_laptop.method_static()
