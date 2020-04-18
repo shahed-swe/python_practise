@@ -17,7 +17,7 @@ class Laptop:
         Laptop.count_instance += 1
         pass
 
-    def __inti__(self, brand_name = None, model_name = None,price = None):
+    def __init__(self, brand_name = None, model_name = None,price = None):
         Laptop.count_instance += 1
         self.brand_name = brand_name
         self.model_name = model_name
@@ -29,11 +29,11 @@ class Laptop:
         return "you have created {} instances".format(cls.count_instance)
     
 
-    # @classmethod
-    # def from_string(cls, string): #constructor using class method
-    #     first,last,end = string.split(',')
-    #     # price = int(price)
-    #     return cls(first,last,end)
+    @classmethod
+    def from_string(cls, string): #constructor using class method
+        first,last,end = string.split(',')
+        # price = int(price)
+        return cls(first,last,end)
 
     def laptop_details(self): #instance methods
         return f"Laptop Name: {self.brand_name}\nModel Name: {self.model_name}"
@@ -66,6 +66,6 @@ if __name__ == '__main__':
     print(Laptop.count_instance)
     print(new_laptop3.count_instance) #both of the results are same
     print(Laptop.count_instances())
-    # laptop1 = Laptop.from_string("Shahed,Ashik,1899")
-    # print(laptop1.brand_name)
+    laptop1 = Laptop.from_string("Shahed,Ashik,1899")
+    print(laptop1.brand_name)
     new_laptop.method_static()
