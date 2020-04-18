@@ -58,3 +58,11 @@ class Calculator():
         for i in args:
             new_list.append(self.number1 * i)
         return new_list
+    
+    def sort_list(self,list1):
+        for i in range(len(list1)):
+            for j in range(len(list1)):
+                if list1[i] < list1[j]:
+                    list1[i] = list1[i] ^ list1[j]
+                    list1[j] = list1[i] ^ list1[j]
+                    list1[i] = list1[i] ^ list1[j]

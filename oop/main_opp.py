@@ -20,7 +20,11 @@ if __name__ == '__main__':
     # for i in take:
     #     print(i)
     c1 = Calculator()
-    c1.number1 = 2
+    c1.number1 = 3
     list2 = c1.is_even(1,2,3,4,5,6)
     print(list2)
+    list2 = [3,1,5,6,2,14]
+    c1.sort_list(list2)
+    print(list2)
+    
 
