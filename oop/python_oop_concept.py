@@ -44,3 +44,17 @@ class Laptop:
     #     for i in range(to):
     #         yield i
     #         await asyncio.sleep(delay)
+
+class Calculator():
+    def __init__(self):
+        pass
+
+    def __init__(self, number1 = None,number2 = None):
+        self.number1 = number1
+        self.number2 = number2
+    
+    def is_even(self, *args):
+        new_list = []
+        for i in args:
+            new_list.append(self.number1 * i)
+        return new_list

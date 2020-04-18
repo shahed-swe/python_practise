@@ -1,4 +1,4 @@
-from python_oop_concept import Person,Laptop
+from python_oop_concept import *
 
 
 if __name__ == '__main__':
@@ -19,3 +19,8 @@ if __name__ == '__main__':
     # take = list(l1.number(50,1000))
     # for i in take:
     #     print(i)
+    c1 = Calculator()
+    c1.number1 = 2
+    list2 = c1.is_even(1,2,3,4,5,6)
+    print(list2)
+
