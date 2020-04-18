@@ -1,3 +1,6 @@
+# multi level inheritance
+
+
 class Phone:
     discount_price = 10 #class variable has been declared
     count_instance = 0
@@ -48,15 +51,52 @@ class Smartphone(Phone):
         self.internal_memory = internal_memory
         self.rear_camera = rear_camera
 
-    def specification(self):
+    def full_name(self):
         return f"Name: {self.brand_name} {self.model_name}\nPrice: {self._price}\nInternal Memory: {self.internal_memory}"
+
+class Flagship(Smartphone):
+    def __init__(self):
+        pass
+
+    def __init__(self, brand_name = None, model_name = None,price = 0, ram = None, internal_memory = None, rear_camera = None,front_camera = None,Processor = None):
+        super().__init__(brand_name = None, model_name = None,price = 0, ram = None, internal_memory = None, rear_camera = None)
+        self.front_camera = front_camera
+        self.processor = Processor
+
+
+    def full_name(self):
+        return f"Name: {self.brand_name} {self.model_name}\nPrice: {self._price}\nRam: {self.ram}\nFront Camera: {self.front_camera}\nRare Camera: {self.rear_camera}\nProcessor: {self.processor}"
 
 
 # p1 = Phone()
 # s1 = Smartphone('Nokia','Lumia 800',900000,'4gb','64gb','20mp')
-s1 = Smartphone()
+# s1 = Smartphone()
+s1 = Flagship()
 s1.brand_name = "Nokia"
 s1.model_name = "Lumia 900"
 s1.price = 90000
 s1.internal_memory = "64gb"
-print(s1.specification())
+s1.front_camera = "24mp"
+s1.rear_camera = "12mp"
+s1.ram = "6gb"
+s1.processor = "520 poly carbon"
+print(s1.full_name())
+print(s1.__dict__)
+print(s1.full_name())
+print(s1.complete_specification)
+
+
+# print(help(Flagship))
+
+# isinstance --> helps to check the object is for it;s class or not
+print(isinstance(s1, Phone))
+print(isinstance(s1, Smartphone))
+print(isinstance(s1, Flagship))
+s2 = Smartphone()
+print(isinstance(s2, Phone))
+print(isinstance(s2, Smartphone))
+print(isinstance(s2, Flagship))
+s3 = Phone()
+print(isinstance(s3, Phone))
+print(isinstance(s3, Smartphone))
+print(isinstance(s3, Flagship))

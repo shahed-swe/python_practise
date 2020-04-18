@@ -31,4 +31,4 @@ if __name__ == '__main__':
     new_laptop.model_name = "450 G6 core i7 9th Generation"
     new_laptop.price = int(input("Enter laptop price:"))
     print("{}\nPrice After Discount: {}".format(new_laptop.laptop_details(),new_laptop.apply_discount()))
-
+    
