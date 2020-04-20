@@ -82,18 +82,3 @@ with open('final.csv','r') as rf:
                 'last_name':lname.upper(),
                 'salary': salary
             })
-import os
-import time
-f = os.getcwd()
-# os.mkdir('5555')
-for i in range(1,10000):
-    # os.mkdir(str(i)+"take")
-    # time.sleep(-50)
-    os.rmdir(str(i)+"take")
-# os.rmdir('5555')
-# if os.path.exists()
-
-# create file
-open('file.txt','a').close()
-
-os.system('o')
