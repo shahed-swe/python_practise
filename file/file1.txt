@@ -1,0 +1,4 @@
+Shahed's' salary is 10000
+Ashik's' salary is 20000
+Aaditya's' salary is 200
+Nitisha's' salary is 500

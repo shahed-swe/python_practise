@@ -1,0 +1,4 @@
+Shahed,10000
+Ashik,20000
+Aaditya,200
+Nitisha,500
