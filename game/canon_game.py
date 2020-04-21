@@ -55,7 +55,7 @@ def move():
     targets.clear()
     for target in dupe:
         if abs(target - ball) > 13:
-            # print(abs(target - ball))
+            print(abs(target - ball))
             targets.append(target)
     draw()
         
