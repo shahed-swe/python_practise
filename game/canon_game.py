@@ -45,12 +45,12 @@ def move():
     
     for target in targets:
         target.x -= 0.5
-        print(target.x)
+        # print(target.x)
     
     if inside(ball):
         speed.y -= 0.35
         ball.move(speed)
-        print(ball)
+        print(f"{speed.y} --> {ball}")
     dupe = targets.copy()
     targets.clear()
     for target in dupe:
