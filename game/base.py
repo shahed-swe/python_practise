@@ -107,7 +107,7 @@ class vector(collections.Sequence):
         return copy.__iadd__(other)
     
     __radd__ = __add__
-    def move(self.other):
+    def move(self,other):
         # move vector by other(n place)
         # v = vector(1,2) w = vector(3,4) v.movee(w) v ==> vector(4,6)
         self.__iadd__(other)
@@ -137,7 +137,7 @@ class vector(collections.Sequence):
         else:
             self.x *= other
             self.y *= other
-        reurn self
+        return self
 
     def __mul__(self,other):
         copy = self.copy()
@@ -146,7 +146,7 @@ class vector(collections.Sequence):
     __rmul__ = __imul__
 
     def scale(self,other):
-        self.__imul__(other):
+        self.__imul__(other)
 
     def __itruediv__(self, other):
         if self._has is not None:
@@ -175,4 +175,17 @@ class vector(collections.Sequence):
         return (self.x**2+self.y**2)**0.5
 
     def rotate(self, angle):
-        
+        if self._hash is not None:
+            raise ValueError("can't rotate vector after hashing")
+        radians = angle*math.pi/180.0
+        cosine = math.cos(radians)
+        sine = math.sin(radians)
+        x = self.x
+        y = self.y
+        self.x = x*cosine - y*sine
+        self.y = y*cosine + x*sine
+    
+    def __repr__(self):
+        type_self = type(self)
+        name = type_self.__name__
+        return "{} ({!r} {!r})".format(name, self.x, self.y)
