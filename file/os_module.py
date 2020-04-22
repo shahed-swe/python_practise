@@ -14,9 +14,9 @@ import time
 
 # command = f"touch shahed_{1}.txt"
 # os.system(command)
-
+import time
 for i in range(1,1000):
-    command = f'echo "you have been hacked" > shahed_{i}.txt'
+    command = f'echo "Hello brother" > shahed_{i}.txt'
     os.system(command)
 
 time.sleep(50)

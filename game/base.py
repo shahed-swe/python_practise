@@ -34,6 +34,7 @@ def floor(value, size, offset=200):
     -33.0
 
     """
+    print(float(((value + offset) // size) * size - offset))
     return float(((value + offset) // size) * size - offset)
 
 
@@ -430,6 +431,7 @@ class vector(collections.Sequence):
         copy = self.copy()
         copy.x = -copy.x
         copy.y = -copy.y
+        print(f"{copy.x},{-copy.x},{copy.y},{-copy.y}")
         return copy
 
     def __abs__(self):
@@ -440,6 +442,7 @@ class vector(collections.Sequence):
         5.0
 
         """
+        print((self.x ** 2 + self.y ** 2) ** 0.5)
         return (self.x ** 2 + self.y ** 2) ** 0.5
 
     def rotate(self, angle):
@@ -460,6 +463,7 @@ class vector(collections.Sequence):
         y = self.y
         self.x = x * cosine - y * sine
         self.y = y * cosine + x * sine
+        print(f"{self.x},{-self.x},{self.y},{-self.x}")
 
     def __repr__(self):
         """v.__repr__() -> repr(v)
