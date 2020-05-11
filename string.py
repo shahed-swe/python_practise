@@ -129,8 +129,8 @@ new_name = name.rjust(l+2,"*")
 # rstrip()
 #replace()
 name = "The quick brown fox jumps over the lazy dog"
-print(text.upper())
-print(text.lower())
+print(name.upper())
+print(name.lower())
 print(name.title())
 
 string = "Suppose you have to do this early and you have to the same work again you to"
