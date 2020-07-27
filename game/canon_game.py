@@ -59,7 +59,7 @@ def move():
             targets.append(target)
     draw()
         
-    for taraget in targets:
+    for target in targets:
         if not inside(target):
             return
     # ontimer(move, 50)
